@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV Information</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CVWebstyle.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&family=Nunito+Sans:wght@200;400;700&family=Nunito:wght@200;500;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9793d943a0.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="cv">
+            <div class="cv-container">
+                <button class="btn-open" onclick="btn_open()">
+                    <i class="fa-solid fa-square-pen"></i>
+                </button>
+                <button class="btn-down" onclick="downloadURI([fname, username, email, pnumber, address, position, gender], 'Getinfo.txt', download)">
+                    <i class="fa-solid fa-download"></i>
+                </button>
+                <div class="cv-info-left c-4-8 m-12">
+                    <div class="cv-avatar">
+                        <div class="cv-avatar-img">
+                            <img id="img_output" src="./asset/images/user-icon.png">
+                        </div>
+                    </div>
+                    <div class="cv-title-mobile">
+                        <div class="cv-title-name" id="cvnamemobile">NATASHA FIELDS</div>
+                        <div class="cv-title-position" id="cvpositionmobile">WEB DEVELOPER</div>
+                    </div>
+                    <div class="cv-info-content">
+                        <div class="cv-contact m-12">
+                            <h3>Contact</h3>
+                            <div class="cv-contact-info">
+                                <i class="fa-solid fa-phone icon"></i>
+                                <div class="text" id="cvpnumber">+00 1234 56789</div>
+                            </div>
+                            <div class="cv-contact-info">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                                <div class="text" id="cvemail">info@example.com</div>
+                            </div>
+                            <div class="cv-contact-info">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div class="text" id="cvaddress">Address here, City, 12345</div>
+                            </div>
+                            <div class="cv-contact-info">
+                                <i class="fa-solid fa-globe"></i>
+                                <div class="text">Yourwebsite.com</div>
+                            </div>
+                        </div>
+                        <div class="cv-social m-12">
+                            <h3>Social Account</h3>
+                            <div class="cv-social-acc">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <div class="text">fb/yourlinkhere</div>
+                            </div>
+                            <div class="cv-social-acc">
+                                <i class="fa-brands fa-instagram"></i>
+                                <div class="text">ins/yourlinkhere</div>
+                            </div>
+                            <div class="cv-social-acc">
+                                <i class="fa-brands fa-twitter"></i>
+                                <div class="text">Twitter/yourlinkhere</div>
+                            </div>
+                            <div class="cv-social-acc">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="text">in/yourlinkhere</div>
+                            </div>
+                        </div>
+                        <div class="cv-skill m-12">
+                            <h3>Skills</h3>
+                            <div class="cv-skill-lang">
+                                <p>HTML</p>
+                                <div class="cv-skill-rate m-12">
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="cv-skill-lang">
+                                <p>JAVA SCRIPT</p>
+                                <div class="cv-skill-rate m-12">
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="cv-skill-lang">
+                                <p>PHP</p>
+                                <div class="cv-skill-rate m-12">
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="cv-skill-lang">
+                                <p>CSS</p>
+                                <div class="cv-skill-rate m-12">
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="cv-skill-lang">
+                                <p>WORD PRESS</p>
+                                <div class="cv-skill-rate m-12">
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star checked"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cv-hobby m-12">
+                            <h3>Hobby</h3>
+                            <div class="cv-hobby-content m-12">
+                                <div class="cv-hobby-left m-12">
+                                    <div class="cv-hobby-interest m-12">
+                                        <i class="fa-solid fa-book-open"></i>
+                                        <div class="text">Reading</div>
+                                    </div>
+                                    <div class="cv-hobby-interest m-12">
+                                        <i class="fa-solid fa-person-biking"></i>
+                                        <div class="text">Cycling</div>
+                                    </div>
+                                    <div class="cv-hobby-interest m-12">
+                                        <i class="fa-solid fa-palette"></i>
+                                        <div class="text">Painting</div>
+                                    </div>
+                                </div>
+                                <div class="cv-hobby-right m-12">
+                                    <div class="cv-hobby-interest m-12">
+                                        <i class="fa-solid fa-person-walking-luggage"></i>
+                                        <div class="text">Travelling</div>
+                                    </div>
+                                    <div class="cv-hobby-interest m-12">
+                                        <i class="fa-solid fa-tape"></i>
+                                        <div class="text">Playing</div>
+                                    </div>
+                                    <div class="cv-hobby-interest m-12">
+                                        <i class="fa-solid fa-plant-wilt"></i>
+                                        <div class="text">Gardening</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="white-bar"></div>
+                </div>
+                <div class="cv-info-right c-7-2 m-12">
+                    <div class="cv-title-pc">
+                        <div class="cv-title-name">NATASHA FIELDS</div>
+                        <div class="cv-title-position">WEB DEVELOPER</div>
+                    </div>
+                    <div class="cv-content">
+                        <div class="cv-content-detail">
+                            <h3>Profile</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
+                        </div>
+                        <div class="cv-content-detail">
+                            <h3>Objective</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
+                        </div>
+                        <div class="cv-content-detail">
+                            <h3>Work Experience</h3>
+                            <div class="cv-content-detal-history">
+                                <span>Company Name /</span>
+                                <span>2017-2020</span>
+                                <h4>[ Job Positions ]</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                            </div>
+                        </div>
+                        <div class="cv-content-detail">
+                            <h3>Education</h3>
+                            <div class="cv-content-detal-history">
+                                <span>University Name /</span>
+                                <span>2017-2020</span>
+                                <h4>[ Your Masters Degree ]</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                            </div>
+                            <div class="cv-content-detal-history">
+                                <span>University Name /</span>
+                                <span>2017-2020</span>
+                                <h4>[ Your Masters Degree ]</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="form-container" id="popup1">
+            <div class="form-form-container">
+                <button class="btn-close" onclick="btn_close()">
+                    <i class="fa-solid fa-square-xmark"></i>
+                </button>
+                <div class="form-title">
+                    <h1>CV Information</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="form-info-insert">
+                    <form class="form" id="form" action="">
+                        <div class="form-info">
+                            <div class="form-info-1">
+                                <label for="fname">Full Name</label><br>
+                                <input type="text" id="fname" name="Full Name" placeholder="Enter your name" onblur="nameCheck(this)" oninput="onInput(this)"><br>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <small>Error message</small>
+                            </div>  
+                            <div class="form-info-1">
+                                <label for="username">Username</label><br>
+                                <input type="text" id="username" name="Username" placeholder="Enter your username" onblur="onBlurCheck(this)" oninput="onInput(this)"><br>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <small>Error message</small>
+                            </div>
+                        </div>
+                        <div class="form-info">
+                            <div class="form-info-1">
+                                <label for="email">Email</label><br>
+                                <input type="email" id="email" name="Email" placeholder="Enter your email" onblur="emailCheck(this)" oninput="onInput(this)"><br>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <small>Error message</small>
+                            </div> 
+                            <div class="form-info-1">
+                                <label for="pnumber">Phone Number</label><br>
+                                <input type="text" id="pnumber" name="Phone Number" placeholder="Enter your number" onblur="phoneNumberCheck(this)" oninput="onInput(this)"><br>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <small>Error message</small>
+                            </div> 
+                        </div>
+                        <div class="form-info">
+                            <div class="form-info-1">
+                                <label for="address">Address</label><br>
+                                <input type="text" id="address" name="Address" placeholder="Enter your address" onblur="onBlurCheck(this)" oninput="onInput(this)"><br>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <small>Error message</small>
+                            </div>
+                            <div class="form-info-1">
+                                <label for="position">Applied position</label><br>
+                                <input type="text" id="position" name="Position" placeholder="Enter your applied position" onblur="onBlurCheck(this)" oninput="onInput(this)"><br>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <small>Error message</small>
+                            </div>
+                        </div>
+                        <div class="form-info-gender">
+                            <h3>Gender</h3>
+                            <div class="form-info-gender-selector">
+                                <label for="male" class="form-gender-selector">
+                                    <input type="radio" id="male" name="gender" value="male" checked="checked">
+                                    <div class="dot one"></div>
+                                    <span>Male</span>
+                                </label>  
+                                <label for="female" class="form-gender-selector">
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <div class="dot two"></div>
+                                    <span>Female</span>
+                                </label>
+                                <label for="prefernot" class="form-gender-selector">
+                                    <input type="radio" id="prefernot" name="gender" value="other">
+                                    <div class="dot three"></div>
+                                    <span>Prefer not to say</span>
+                                </label>
+                            </div>  
+                        </div>
+                        <div class="form-avatar">
+                            <h3>Avatar</h3>
+                            <div class="avatar-preview" id="display_image">
+                                    
+                                    <img src="" id="preview_image">
+                                   
+                                    <div class="preview-text-box">
+                                        <div class="preview-icon">
+                                            <i class="fas fa-images"></i>
+                                        </div>
+
+                                        <span class="preview-text"> Drag & Drop </span>
+                                        <span class="preview-text">or <span class="button">browse</span></span>
+                                        <input type="file" id="browse" hidden>
+
+                                        <span class="support">Supports: PNG, JPG, JPEG</span>
+                                    </div>
+                                        
+                            </div>
+                        </div>
+                        <div class="form-skill">
+                            <h3>Skill</h3>
+                            <div class="form-skill-container">
+                                <div style="color:#555555;">Add your skill name & rating from 1 to 6</div>
+
+                            </div>
+                            
+                            <div class="add-skill-btn">
+                                <button id="add-skill">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                           
+                        </div>
+                    </form>
+                </div>
+                <div class="form-submit">
+                    <button onclick="checkValidate()">Submit</button>
+                </div>
+            </div>
+            <div class="form-close" id="form-close" onclick="outside_divclick()"></div>
+        </div>
+
+
+        <script src="./Script.js"></script>
+    </body>
+</html>
